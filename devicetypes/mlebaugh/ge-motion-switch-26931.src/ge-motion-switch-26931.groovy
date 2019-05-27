@@ -25,7 +25,7 @@ metadata {
 		capability "Sensor"
 		capability "Health Check"
 		capability "Light"
-        capability "Button"
+        // capability "Button"
 
 		command "toggleMode"
         command "Occupancy"
@@ -179,7 +179,7 @@ metadata {
 		}
               
 		standardTile("operatingMode", "device.operatingMode", inactiveLabel: false, decoration: "flat", width: 2, height: 2) {
-			state "default", label:'Mode toggle: ${currentValue}', unit:"", action:"toggleMode"
+			state "default", label:'${currentValue}', unit:"", action:"toggleMode", icon: "st.Electronics.electronics13"
 		}
 
 		main(["switch"])
